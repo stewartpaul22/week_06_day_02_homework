@@ -40,4 +40,10 @@ public class Library {
         }
         return true;
     }
+
+    public Book issueBook(Book book) {
+        this.stock.remove(book);
+        return book;
+
+    }
 }

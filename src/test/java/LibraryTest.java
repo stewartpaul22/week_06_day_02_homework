@@ -41,7 +41,13 @@ public class LibraryTest {
         assertTrue(library.checkIfStockFull());
     }
 
-
+    @Test
+    public void canIssueBook() {
+        library.addBook(book);
+        assertEquals(1, library.getStockCount());
+        library.issueBook(book);
+        assertEquals(0, library.getStockCount());
+    }
 
 
 
