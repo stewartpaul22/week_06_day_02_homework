@@ -29,6 +29,12 @@ public class Library {
     }
 
     public void addBook(Book book) {
-        this.stock.add(book);
+        if (checkIfStockFull() == true) {
+            this.stock.add(book);
+        }
+    }
+
+    public boolean checkIfStockFull() {
+        return (this.getStockCount() < this.capacity);
     }
 }
