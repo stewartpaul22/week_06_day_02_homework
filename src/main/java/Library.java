@@ -6,12 +6,17 @@ public class Library {
     private ArrayList<Book> stock;
     private int capacity;
 
+    public Library(int capacity) {
+        this.stock = new ArrayList<>();
+        this.capacity = capacity;
+    }
+
     public ArrayList<Book> getStock() {
-        return stock;
+        return this.stock;
     }
 
     public int getCapacity() {
-        return capacity;
+        return this.capacity;
     }
 
     public void setCapacity(int capacity) {
@@ -19,9 +24,7 @@ public class Library {
     }
 
 
-
-
-
-
-
+    public int getStockCount() {
+        return this.stock.size();
+    }
 }
