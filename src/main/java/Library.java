@@ -1,4 +1,4 @@
-import java.awt.print.Book;
+//import java.awt.print.Book;
 import java.util.ArrayList;
 
 public class Library {
@@ -26,5 +26,9 @@ public class Library {
 
     public int getStockCount() {
         return this.stock.size();
+    }
+
+    public void addBook(Book book) {
+        this.stock.add(book);
     }
 }
