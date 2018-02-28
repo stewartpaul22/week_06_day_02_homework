@@ -12,7 +12,7 @@ public class LibraryTest {
     @Before
     public void before() {
         library = new Library(5);
-        book = new Book("Kill Your Friends", "John Niven");
+        book = new Book("Kill Your Friends", "John Niven", GenreType.COMEDY);
     }
 
     @Test
@@ -28,11 +28,11 @@ public class LibraryTest {
 
     @Test
     public void checkStockIsFull__isFull() {
-        Book book1 = new Book("Kill Your Friends", "John Niven");
-        Book book2 = new Book("The Second Coming", "John Niven");
-        Book book3 = new Book("Empire of the Sun", "J.G. Ballard");
-        Book book4 = new Book("The Old Man and the Sea", "Ernest Hemingway");
-        Book book5 = new Book("Neuromancer", "William Gibson");
+        Book book1 = new Book("Kill Your Friends", "John Niven", GenreType.COMEDY);
+        Book book2 = new Book("The Second Coming", "John Niven", GenreType.COMEDY);
+        Book book3 = new Book("Empire of the Sun", "J.G. Ballard", GenreType.DRAMA);
+        Book book4 = new Book("The Old Man and the Sea", "Ernest Hemingway", GenreType.DRAMA);
+        Book book5 = new Book("Neuromancer", "William Gibson", GenreType.SCIFI);
         library.addBook(book1);
         library.addBook(book2);
         library.addBook(book3);
